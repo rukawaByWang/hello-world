@@ -1,0 +1,16 @@
+/* pages/about/about.wxss */
+.root{
+  padding: 40rpx;
+  margin: 50rpx;
+  margin-top: 50rpx;
+  font-size: 26rpx;
+  line-height:26px;
+  background-color: rgb(255, 255, 255);
+  color: #666666;
+}
+.content{
+  margin-top: 26rpx
+}
+page{
+  background-color: rgb(241, 241, 241)
+}

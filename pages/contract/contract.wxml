@@ -1,0 +1,56 @@
+<view class="contract_list_view">
+  <van-cell-group wx:for="{{ contractList }}" wx:key="index">
+    <van-cell title="合同编号" value="{{ item.ctName }}"/>
+    <van-cell title="入驻园区" value="{{ item.pkName }}"/>
+    
+    <van-cell is-link 
+              title="合同详情"
+              link-type="navigateTo"
+              url="/pages/contract/detail/contractDetail?ctCode={{ item.ctCode }}"/>
+
+    <van-cell is-link 
+              title="账单详情"
+              link-type="navigateTo"
+              url="/pages/bill/bill?ctCode={{ item.ctCode }}"/>
+    <view class="background_view"></view>
+  </van-cell-group>
+</view>
+
+<button type="primary"
+        bind:tap="bindContract"
+        class="bing_contract_button">绑定合同</button>
+
+<van-popup show="{{ showPopup }}" bind:close="onClose" position="top">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <van-field value="{{ phone }}"
+               name="phone"
+               center
+               clearable
+               bind:blur="getPhone"
+               label="手机号"
+               type="number"
+               maxlength="11"
+               error-message="{{ errorPhone }}"
+               placeholder="请输入合同签约手机号"
+               use-button-slot>
+      <van-button wx:if="{{ send }}" slot="button" size="small" type="primary" bind:tap="sendSms">
+        发送验证码
+      </van-button>
+
+      <van-button wx:if="{{ !send }}" slot="button" size="small" type="primary" plain disabled>
+        {{ second }}
+      </van-button>
+    </van-field>
+
+   <van-field value="{{ authCode }}"
+              name="authCode"
+              type="number"
+              label="验证码"
+              placeholder="请输入验证码"
+              border clearable/>
+
+    <view class="submit_button">
+      <button type="primary" size="mini" form-type="submit">提交</button>
+    </view>
+  </form>
+</van-popup>

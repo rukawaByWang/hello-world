@@ -1,0 +1,56 @@
+/* component/bill-info/bill-info.wxss */
+page{
+  background-color: rgb(241,241,241)
+}
+
+.bill-info{
+  padding-bottom: 130rpx;
+}
+
+.cut-line{
+  height: 10rpx;
+}
+
+.clearfix::after {
+  content:'';
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.payBox{
+  /* border-top: 2rpx solid #1E90FF; */
+  
+  padding: 20rpx;
+  /* display: flex; */
+  height: 70rpx;
+  position: relative;
+  background-color: rgb(255,255,255);
+}
+/* .select-box{
+  align-self:center;
+} */
+
+
+.select-box {
+  /* position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%); */
+  float: left;
+  width: 58rpx;
+  margin-top: 14rpx;
+  
+
+}
+
+.price-l{
+  /* margin-left: 58rpx; */
+  /* width: 490rpx */
+  float: left;
+}
+
+.price-r{
+  float: right;
+}

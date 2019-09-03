@@ -1,0 +1,9 @@
+page {
+  background-color: rgb(242, 242, 242);
+} 
+
+/*分割线*/
+.background_view {
+  height: 20rpx;
+  /* background-color: rgb(242, 242, 242); */
+}

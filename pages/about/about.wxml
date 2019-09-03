@@ -1,0 +1,18 @@
+<!--pages/about/about.wxml-->
+<view class='root'>
+  <view>
+    <text><text style="font-weight:800" decode="{{true}}">&emsp;&emsp;上海环颂供应链管理有限公司</text>（简称<text style="font-weight:800">环颂产业园）</text>，互联网产业园区综合运营商，通过互联网信息技术、园区管理系统、线下园区精细化管理手段，为中小企业提供一站式园区运营服务、结合政府相关产业政策规划，帮助中小企业提高生产效率，提升产业园区综合价值。</text>
+  </view>
+  <view class="content">
+    <text decode="{{true}}">&emsp;&emsp;目前 ，环颂产业园已覆盖上海、苏州、常州、杭州、武汉等全国多个城市。准确的产业定位，优质的招商能力，专业的服务，赢得园区所在地政府、企业的好评，合作伙伴包括京东、德邦、大润发、百丽等众多优质客户。</text>
+  </view>
+  <view class="content">
+    <text decode="{{true}}">服务项目：\n</text>
+    <text>1、园区运营
+  2、园区代理招商
+  3、货物托管
+  4、入住企业后服务：租金分期、注册、环评、工程装修、电路排查、政府扶持项目申请
+  </text>
+  </view>
+
+</view>

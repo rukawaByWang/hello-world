@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/searching/searching",
+    "pages/personal/personal",
+    "pages/news/news",
+    "pages/contract/contract",
+    "pages/bill/bill",
+    "pages/feedback/feedback",
+    "pages/about/about",
+    "pages/contract/detail/contractDetail",
+    "pages/login/login",
+    "pages/login/phonelogin/phonelogin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#178679",
+    "navigationBarTitleText": "园区无忧",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "/miniprogram_npm/vant-weapp/button/index",
+    "van-field": "/miniprogram_npm/vant-weapp/field/index",
+    "van-icon": "/miniprogram_npm/vant-weapp/icon/index",
+    "van-cell": "/miniprogram_npm/vant-weapp/cell/index",
+    "van-cell-group": "/miniprogram_npm/vant-weapp/cell-group/index",
+    "van-nav-bar": "/miniprogram_npm/vant-weapp/nav-bar/index",
+    "van-tab": "/miniprogram_npm/vant-weapp/tab/index",
+    "van-tabs": "/miniprogram_npm/vant-weapp/tabs/index",
+    "van-checkbox": "/miniprogram_npm/vant-weapp/checkbox/index",
+    "van-checkbox-group": "/miniprogram_npm/vant-weapp/checkbox-group/index",
+    "van-action-sheet": "/miniprogram_npm/vant-weapp/action-sheet/index",
+    "van-dialog": "/miniprogram_npm/vant-weapp/dialog/index",
+    "van-popup": "/miniprogram_npm/vant-weapp/popup/index",
+    "van-panel": "/miniprogram_npm/vant-weapp/panel/index",
+    "van-toast": "/miniprogram_npm/vant-weapp/toast/index",
+    "van-notice-bar": "/miniprogram_npm/vant-weapp/notice-bar/index",
+    "van-row": "/miniprogram_npm/vant-weapp/row/index",
+    "van-col": "/miniprogram_npm/vant-weapp/col/index"
+  },
+  "tabBar": {
+    "selectedColor": "#178679",
+    "list": [
+      {
+        "pagePath": "pages/searching/searching",
+        "text": "找房",
+        "iconPath": "/assets/images/shop.png",
+        "selectedIconPath": "/assets/images/shop-selected.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "text": "资讯",
+        "iconPath": "/assets/images/news.png",
+        "selectedIconPath": "/assets/images/news-selected.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "/assets/images/person.png",
+        "selectedIconPath": "/assets/images/person-selected.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+<!--pages/searching/searching.wxml-->
+<view class="root">
+
+  <view>
+
+    <swiper autoplay interval="{{ interval }}" class="carousel">
+      <block wx:for="{{ carouselList }}" wx:key="{{ index }}">
+        <swiper-item>
+          <image class="carousel-img" src="{{ item.url }}" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+
+  <view class="topic">
+    <text>园区研究院</text>
+  </view>
+
+  <!-- <view class="middle">
+    <block wx:for="{{ middleList_1 }}" wx:key="{{ index }}">
+      <view class="middle_v">
+        <image class="middle-img" src="{{ item.url }}" mode="widthFix"></image>
+      </view>
+    </block>
+  </view>
+  <view class="middle">
+    <block wx:for="{{ middleList_2 }}" wx:key="{{ index }}">
+      <view class="middle_v">
+        <image class="middle-img" src="{{ item.url }}" mode="widthFix"></image>
+      </view>
+    </block>
+  </view> -->
+
+  <view class="middle">
+    <van-row>
+      <block wx:for="{{ middleList }}" wx:key="{{ index }}">
+        <van-col span="12">
+          <image class="middle-img" src="{{ item.url }}" ></image>
+        </van-col>
+      </block>
+
+    </van-row>
+  </view>
+
+  <view class="topic">
+    <text>特色推荐</text>
+  </view>
+
+  <view class="below">
+
+    <block wx:for="{{ belowList }}" wx:key="{{ index }}">
+      <view class="below_v">
+        <image class="below-img" src="{{ item.url }}"></image>
+      </view>
+    </block>
+  </view>
+
+</view>

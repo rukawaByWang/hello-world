@@ -1,0 +1,13 @@
+<view class="pay-statistics">
+  <van-checkbox checked-color="red" class="select-box" value="{{ checked }}" bind:change="selectAll">
+    <text style="font-size: 30rpx">全选</text>
+  </van-checkbox>
+  <view class="pay-calculate">
+    <text style="font-size: 20rpx">共选中 {{ selectCount }} 条账单\n合计 </text>
+    <text style="font-size: 24rpx; color: red">￥{{ totalPrice }}</text>
+  </view>
+  <view class="pay">
+    <button bindtap="wxPay" type="warn">支付</button>
+  </view>
+  
+</view>

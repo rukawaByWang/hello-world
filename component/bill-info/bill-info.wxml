@@ -1,0 +1,38 @@
+<!--component/bill-info/bill-info.wxml-->
+<wxs src='../../filter/filter.wxs' module='filter'></wxs>
+<view class="bill-info">
+  <van-checkbox-group value="{{ selectedBill }}" bind:change="selectedBill">
+    <block wx:for="{{ billInfoList }}" wx:key="index">
+
+      <view class="payBox clearfix">
+        <van-checkbox wx:if="{{ ifNotPaid }}" checked-color="red" name="{{ item.billCode }}" class="select-box"></van-checkbox>
+        <view class="price-l">
+          <block wx:if="{{ ifNotPaid }}">
+            <view>￥{{ item.totalPrice - item.paidPrice }}
+              <text style="font-size: 20rpx"> {{ item.billName }}</text>
+            </view>
+          </block>
+          <block wx:else>
+            <view>￥{{ item.paidPrice }}
+              <text style="font-size: 20rpx"> {{ item.billName }}</text>
+            </view>
+          </block>
+
+          <view style="font-size: 20rpx">{{ filter.formatYMD(item.billingTimeStart) }}~{{ filter.formatYMD(item.billingTimeEnd) }}</view>
+        </view>
+
+        <view class="price-r">
+          <block wx:if="{{ ifNotPaid }}">
+            <view style="color: red">{{ item.payStatusName }}</view>
+            <view style="font-size: 20rpx">{{ filter.formatYMD(item.lastReceivingDate) }} 前</view>
+          </block>
+          <block wx:else>
+            <view style="color: green">{{ item.payStatusName }}</view>
+            <view style="font-size: 20rpx">{{ filter.formatYMD(item.payDate) }}</view>
+          </block>
+        </view>
+      </view>
+      <view class="cut-line"></view>
+    </block>
+  </van-checkbox-group>
+</view>

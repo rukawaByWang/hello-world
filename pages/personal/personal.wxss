@@ -1,0 +1,36 @@
+/* pages/personal/personal.wxss */
+.userInfo{
+  position: fixed;  
+  z-index: 9999;
+  /* width: 750rpx;   */
+  width: 100%;
+  height: 200rpx;  
+  color: #fff;    
+  flex-direction: column;  
+  align-items: center; 
+  background: #178679;
+}
+
+.userinfo-avatar { 
+  float: left; 
+  overflow:hidden;  
+  display: block;  
+  width: 160rpx;  
+  height: 160rpx; 
+  margin-left: 16rpx; 
+  /* margin: 20rpx;   */
+  /* margin-top: 50rpx;   */
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}
+.userinfo-userNickName{
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 60rpx;
+}
+.login-out{
+  font-size: 28rpx; 
+  color: white;
+  margin-left: 10rpx;
+}

@@ -1,0 +1,47 @@
+/* pages/searching/searching.wxss */
+.root{
+  /* padding: 40rpx; */
+}
+.carousel{
+  margin-top: 40rpx;
+}
+.carousel image{
+  margin-left: 40rpx;
+  width: 674rpx !important;
+}
+.middle{
+  text-align: center
+}
+
+.middle-img{
+  border-radius: 5%; 
+  width:300rpx;
+  height: 160rpx;
+  margin-top: 20rpx;
+}
+.theme{
+  display: flex
+}
+theme-img{
+  flex: 1
+
+}
+.below{
+  display: flex;
+  text-align: center
+}
+.below_v{
+  flex: 1;
+}
+.below-img{
+  overflow: hidden;
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  width:180rpx;
+  height:180rpx;
+}
+.topic{
+  padding: 40rpx;
+  font-size: 36rpx;
+}

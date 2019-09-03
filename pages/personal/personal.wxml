@@ -1,0 +1,35 @@
+<!--pages/personal/personal.wxml-->
+
+<view class="userInfo">
+  <view wx:if="{{ isLogined }}" class="userinfo-avatar">
+    <open-data  type="userAvatarUrl"></open-data>
+
+  </view>
+  <view class="userinfo-userNickName">
+    <block wx:if="{{ isLogined }}">
+      <text>{{ loginPhoneNum }}</text>
+      <text class='login-out' bind:tap="loginOut">[退出]</text>
+    </block>
+    <block wx:else>
+      <text bindtap="toLogin">[登录]</text>
+    </block>
+
+    <!-- <text bindtap="toLogin">请登录</text> -->
+  </view>
+</view>
+<view style="padding-top: 200rpx; ">
+  <van-cell-group>
+    <van-cell is-link title="合同信息" link-type="navigateTo" bind:click="toContractList" />
+
+    <van-cell is-link title="问题反馈" link-type="navigateTo" bind:click="toFeedback" />
+
+    <van-cell is-link title="关于我们" link-type="navigateTo" url="/pages/about/about" />
+
+    <van-cell is-link title="联系我们" bind:click="toContact" />
+
+  </van-cell-group>
+</view>
+
+
+<!-- 联系我们-->
+<van-action-sheet show="{{ showContact }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />

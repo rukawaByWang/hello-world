@@ -1,0 +1,24 @@
+/* component/gt-card/gt-card.wxss */
+.root{
+  width: 326rpx;
+  height: 263rpx;
+  background-color: rgb(255, 255, 255);
+  padding: 20rpx;
+}
+.title{
+  font-size: 31rpx;
+  font-weight: 550;
+}
+.content{
+  height: 120rpx;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  color: rgb(182, 182, 182)
+}
+.img{
+  float: right;
+  /* margin-top: 30rpx; */
+
+  height: 84rpx;
+  width: 94rpx;
+}

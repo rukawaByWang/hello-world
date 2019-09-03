@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "gt-card": "/component/gt-card/gt-card"
+  }
+}

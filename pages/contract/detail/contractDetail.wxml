@@ -1,0 +1,52 @@
+<wxs src='../../../filter/filter.wxs' module='filter'></wxs>
+
+<van-cell-group title="合同信息">
+  <van-cell title="合同编号" value="{{ contractObj.ctName }}"/>
+  <van-cell title="合同开始" value="{{ filter.formatYMD(contractObj.contractStartTime) }}"/>
+  <van-cell title="合同结束" value="{{ filter.formatYMD(contractObj.contractEndTime) }}"/>
+</van-cell-group>
+
+<van-cell-group title="租金规则">
+  <van-cell title="提前交租" value="{{ contractObj.advanceDateCount + '天' }}"/>
+  <van-cell title="详细递增" 
+            value="{{ '第' + (index + 1) + '年递增' + item + '%' }}" 
+            wx:for="{{ incDetailCaseList }}"
+            wx:key="{{ index }}"
+            wx:if="{{ contractObj.incDetailType == 1 }}"/>
+  <van-cell title="非详细递增" 
+            value="{{ '每' + contractObj.increasingCycle + '年递增' + contractObj.rentIncreaseProportion + '%' }}" 
+            wx:if="{{ contractObj.incDetailType == 2 }}"/>
+</van-cell-group>
+
+<van-cell-group title="房租支付方式">
+  <van-cell title="付款方式" value="{{ '付' + contractObj.payRule + '月，押' + contractObj.depositRule + '月' }}"/>
+  <van-cell title="实付押金" value="{{ contractObj.deposit + '元' }}"/>
+</van-cell-group>
+
+<van-cell-group title="房屋出租情况">
+  <van-cell title="每月总租金" value="{{ contractObj.rentTotal + '元' }}"/>
+  <van-cell title="出租总面积" value="{{ contractObj.totalRentalArea + '㎡' }}"/>
+  <van-cell title="物业费单价" value="{{ contractObj.propertyUnitPrice + contractObj.propertyUnit }}"/>
+  <van-cell title="入驻园区" value="{{ contractObj.pkName }}"/>
+  <van-cell title="园区地址" value="{{ contractObj.houseAddress }}"/>
+</van-cell-group>
+
+<van-cell-group title="楼层详情" wx:for="{{ contractObj.contractHouseList }}" wx:key="index">
+  <van-cell title="出租楼层" value="{{ item.bdName + '栋' + item.flCount + '层' }}"/>
+  <van-cell title="房间号" value="{{ item.roomNumber != null ? item.roomNumber : '---' }}"/>
+  <van-cell title="出租计租面积" value="{{ item.investArea + '㎡' }}"/>
+  <van-cell title="公摊比" value="{{ item.areaRate != null ? (item.areaRate + '%') : '---' }}"/>
+  <van-cell title="房租单价" value="{{ item.unitPrice + item.unit }}"/>
+  <van-cell title="月租金" value="{{ item.monthlyRent + '元' }}"/>
+</van-cell-group>
+
+
+<van-cell-group title="首付款信息">
+  <van-cell title="电费押金" value="{{ contractObj.eleDeposit + '元' }}"/>
+  <van-cell title="水费押金" value="{{ contractObj.waterDeposit + '元' }}"/>
+  <van-cell title="工程押金" value="{{ contractObj.fpayProjectDeposit + '元' }}"/>
+  <van-cell title="房屋租金" value="{{ contractObj.fpayHouseRent + '元' }}"/>
+  <van-cell title="物业费" value="{{ contractObj.fpayPropertyPrice + '元' }}"/>
+  <van-cell title="保险费" value="{{ contractObj.fpayInsurancePrice + '元' }}"/>
+  <van-cell title="保证金" value="{{ contractObj.fpayBond + '元' }}"/>
+</van-cell-group>

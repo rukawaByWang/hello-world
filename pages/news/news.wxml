@@ -1,0 +1,34 @@
+<!--pages/news/news.wxml-->
+<van-notice-bar left-icon='volume-o' text="欢迎访问上海环颂供应链管理有限公司" />
+<!-- <view class="content">
+<image style='width: 100%; height: 1000rpx' src='/assets/images/newsPage.png'/>
+</view> -->
+<view class="streamer" style="color: rgb(77, 170, 237); margin-top: 12rpx">
+  <text decode="{{true}}">高效入住&emsp;&emsp;|&emsp;&emsp;一站式企业服务&emsp;助力企业新起点</text>
+</view>
+<view class="content">
+  <view class="content-l">
+    <gt-card title="代办环评" content="通过率100%、低于市场价20%、速度领先于行业10%" imageUrl="/assets/images/tree.png" />
+  </view>
+  <view class="content-r">
+    <gt-card title="厂房装修" content="装修快，工期短" imageUrl="/assets/images/cup.png" />
+  </view>
+</view>
+<view style="clear: both; height: 26rpx"></view>
+<view class="streamer">
+  <text decode="{{true}}">增值精选&emsp;&emsp;|&emsp;&emsp;足不出户&emsp;您的专属企业管家</text>
+</view>
+<view class="content">
+  <view class="content-l">
+    <gt-card title="代理招商" content="运筹帷幄、高枕无忧" imageUrl="/assets/images/heart.png" />
+  </view>
+  <view class="content-r">
+    <gt-card title="园区规划设计" content="园区升、级财富升级" imageUrl="/assets/images/ask.png" />
+  </view>
+</view>
+<view style="clear: both;"></view>
+<view class="content">
+  <view class="content-l">
+    <gt-card title="园区代运营" content="信心依托、高枕无忧" imageUrl="/assets/images/build.png" />
+  </view>
+</view>

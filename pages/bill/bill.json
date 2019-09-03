@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "bill-info": "/component/bill-info/bill-info",
+    "total-pay": "/component/total-pay/total-pay"
+  },
+  "navigationBarTitleText": "账单信息"
+}

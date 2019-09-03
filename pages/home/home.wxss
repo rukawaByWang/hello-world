@@ -1,0 +1,11 @@
+/* pages/home/home.wxss */
+.login{
+  width: 160rpx;
+}
+.loginView{
+  text-align:center;
+  margin-top: 60rpx
+}
+.root{
+  margin-top: 300rpx;
+}

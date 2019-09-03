@@ -1,0 +1,71 @@
+<wxs src='../../filter/filter.wxs' module='filter'></wxs>
+
+<van-tabs active="{{ active }}" bind:change="onChange" color="#178679" bind:click="clickTab">
+  <van-tab title="问题反馈">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <van-field name="fbTitle" 
+                 value="{{ feedbackObj.fbTitle }}" 
+                 required clearable label="标题" 
+                 placeholder="请输入问题标题"/>
+
+      <picker bindchange="bindPickerChange"
+              name="fbType"
+              mode="selector" 
+              range="{{ optionList }}" 
+              range-key="{{ 'label' }}"
+              value='{{ optionList[rangekey].label }}'>
+        <van-field name="fbTypeName" 
+                   readonly
+                   value="{{ feedbackObj.fbTypeName }}" 
+                   required clearable label="反馈类型" 
+                   placeholder="请选择反馈类型"/>
+      </picker>
+
+      <van-field name="fbDescription"
+                 value="{{ feedbackObj.fbDescription }}"
+                 label="问题描述"
+                 type="textarea"
+                 placeholder="请输入问题描述"
+                 autosize required clearable/>
+      <van-field name="askQuestionName"
+                 value="{{ feedbackObj.askQuestionName }}"
+                 label="称呼"
+                 placeholder="如何称呼您"
+                 autosize required clearable/>
+      <van-field name="askQuestionPhone"
+                 value="{{ feedbackObj.askQuestionPhone }}"
+                 label="联系方式"
+                 type="number"
+                 maxlength="11"
+                 placeholder="请输入手机号"
+                 autosize required clearable/>
+
+      <scroll-view scroll-x style="background-color: white;">
+        <view class="image_view">
+          <view wx:for="{{ imageList }}" wx:key="index" class="image_background">
+            <van-icon name="cross" class="image_close_button" data-index="{{ index }}" bind:tap="handleClose"/>
+            <image class="image_style" mode="aspectFill" src="{{ item }}"/>
+          </view>   
+
+          <!-- 上传图片按钮 -->
+          <view class="upload_background"> 
+            <image src="../../assets/icon/upload.png" class="upload_button" bind:tap="handleUpload"/>
+          </view>
+        </view>
+      </scroll-view>
+          
+      <button type="primary" 
+              form-type="submit" 
+              class="submit_button">提交</button>
+    </form>
+  </van-tab>
+
+  <van-tab title="我的反馈">
+    <block wx:for="{{ myFeedbackList }}" wx:key="{{ index }}">
+      <van-cell title="标题" value="{{ item.fbTitle }}"/>
+      <van-cell title="时间" value="{{ filter.formatYMD(item.createTime) }}"/>
+      <van-cell title="问题描述" label="{{ item.fbDescription }}"/>
+      <view class="background_view"></view>
+    </block>
+  </van-tab>
+</van-tabs>

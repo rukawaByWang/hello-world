@@ -1,0 +1,19 @@
+<!--pages/login/login.wxml-->
+<view class='wx-root'>
+  <image src='/assets/images/wx.png' class="login-icon"></image>
+  <button style="background: rgb(60, 176, 53) !important;" open-type="getPhoneNumber" bindgetphonenumber="wxLogin" class='wx-login-button' type="primary">
+    微信登录
+  </button>
+  <!-- <button style="background: rgb(60, 176, 53) !important;"  bindtap="wxLogin" class='wx-login-button' type="primary">
+    微信登录
+  </button> -->
+
+</view>
+<view class="phone-root">
+  <view class="phone-login">
+    <image src='/assets/images/phone.png' class="login-icon">
+    </image>
+    <button class="wx-login-button" plain bindtap="phoneLogin">手机登录</button>
+  </view>
+</view>
+<van-toast id="van-toast" />

@@ -1,0 +1,52 @@
+/* pages/bill/bill.wxss */
+
+/* page{
+  background: #E8E8E8
+} */
+
+.van-tab--active{
+  color: red;
+  
+}
+
+
+.van-tabs__scroll--card {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 999;
+  border: 1px solid #ccc;
+  width: 92%;
+}
+
+.van-tabs__scroll--line {
+  position: fixed;
+  left: 0;
+  top: 32px;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 6;
+}
+
+.van-tabs--card .van-tabs__wrap{
+  height: 0 !important;
+}
+
+
+.van-tabs__wrap.van-tabs__wrap.van-hairline--top-bottom.van-hairline--top-bottom {
+  position: static;
+}
+.van-tabs--card{
+  margin: 0 0 !important;
+}
+.van-tabs__scroll--card{
+  width: 100%;
+}
+
+
+.van-tabs{
+  margin-top: 20rpx;
+}

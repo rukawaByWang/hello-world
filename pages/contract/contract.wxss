@@ -1,0 +1,29 @@
+page {
+  background-color: rgb(242, 242, 242);
+} 
+
+/*合同列表view*/
+.contract_list_view {
+  margin-bottom: 110rpx;
+}
+
+/*分割线*/
+.background_view {
+  height: 20rpx;
+}
+
+/*合同绑定弹窗按钮*/
+.bing_contract_button {
+  width: 95%;
+  position: fixed;
+  bottom: 0;
+  margin-left: 2.5%;
+  margin-bottom: 1.5%;
+}
+
+/*发送验证码*/
+.submit_button {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}

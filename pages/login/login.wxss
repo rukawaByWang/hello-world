@@ -1,0 +1,32 @@
+/* pages/login/login.wxss */
+.wx-root{
+  position: fixed;
+  width: 100%;
+  top: 36%;
+}
+.phone-login{
+  clear: both;
+}
+.wx-login-button{
+  
+  height: 60rpx;
+  width: 90%;
+  text-align: center;
+  vertical-align:middle;
+  line-height:60rpx;
+  font-size: 30rpx;
+  
+}
+.phone-root{
+ position: fixed;
+  width: 100%;
+  top: 45%;
+}
+.login-icon{
+  height: 54rpx; 
+  width: 54rpx; 
+  position: absolute;
+  top: 4rpx;
+  left: 30%; 
+  z-index: 999;
+}

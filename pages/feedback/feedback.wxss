@@ -1,0 +1,58 @@
+page {
+  background-color: rgb(242, 242, 242);
+} 
+
+/*提交按钮*/
+.submit_button {
+  width: 95%;
+  position: fixed;
+  bottom: 0;
+  margin-left: 2.5%;
+  margin-bottom: 1.5%
+}
+
+/*上传图片框*/
+.image_view {
+  text-align: center;
+  margin-top: 5rpx;
+  display: inline-flex;
+}
+
+/*上传图片按钮*/
+.upload_button {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 30rpx;
+}
+
+/*上传图片按钮背景*/
+.upload_background {
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+
+/*图片样式*/
+.image_style {
+  width: 150rpx;
+  height: 150rpx;
+  margin-top: -40rpx;
+}
+
+/*图片背景颜色*/
+.image_background {
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 20rpx;
+}
+
+/*图片删除按钮*/
+.image_close_button {
+  float: right;
+  color: white;
+}
+
+.background_view {
+  height: 20rpx;
+}

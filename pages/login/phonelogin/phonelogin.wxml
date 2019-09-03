@@ -1,0 +1,55 @@
+<view class="root">
+  <van-cell-group>
+    <van-field
+      left-icon='phone-o'
+      value="{{ phoneNum }}"
+      required
+      clearable
+      type='number'
+      placeholder="请输入手机号"
+      bind:blur="setPhoneNum"
+      error-message="{{ phoneError }}"
+    />
+
+    <van-field 
+      required
+      left-icon='bulb-o'
+      id="code" 
+      name="codeImg" 
+      placeholder="请输入图形验证码"
+      value="{{ imgCode }}"
+      error-message="{{ imgError }}"
+      bind:blur="setImg"
+    />
+    <view style='position:relative;' bindtap="onTap">
+      <canvas 
+        style="width:190rpx;height:70rpx;position:absolute;right:0rpx;bottom:10rpx;text-align: center;z-index:999;"                canvas-id="canvas">
+      </canvas>
+    </view>
+    
+    <van-field
+      required
+      left-icon='sign'
+      value="{{ smsCode }}"
+      center
+      clearable
+      placeholder="请输入短信验证码"
+      border=true
+      use-button-slot
+      type='number'
+      bind:blur="setSMS"
+      error-message="{{ smsError }}"
+    >
+      <van-button disabled="{{ has_send_sms }}"  bind:click="sendSMS" slot="button" size="small" type="primary">
+        {{ smsText }}
+      </van-button>
+    </van-field>
+  </van-cell-group>
+  <view class="loginView">
+    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="toLogin" class="commit-button" size="small" type="primary" >登录</button> -->
+    <button bindtap="toLogin" class="commit-button" size="small" type="primary" >登录</button>
+  </view>
+  <van-dialog id="van-dialog" />
+  <van-toast id="van-toast" />
+</view>
+

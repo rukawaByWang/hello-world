@@ -1,0 +1,6 @@
+<!--component/gt-card/gt-card.wxml-->
+<view class="root"> 
+  <view class="title">{{ title }}</view>
+  <view class="content">{{ content }}</view>
+  <image class="img" src="{{ imageUrl }}"></image>
+</view>

@@ -1,0 +1,76 @@
+<!--pages/bill/bill.wxml-->
+<van-tabs color="#9AC0CD" type="card" class="van-tabs" bind:change="changeBill" >
+  <van-tab title="租金账单">
+    <van-tabs color="#178679" swipeable bind:change="changePayStatus" active="{{ payStatusActive }}">
+      <van-tab title="未支付">
+        <bill-info 
+          billInfoList="{{ billInfoList }}" 
+          selectedBill="{{ selectedBill }}"
+          ifNotPaid="{{ true }}"
+          bind:selectBack="selectBack" 
+        />
+        <total-pay 
+          checked="{{ selectAll }}" 
+          totalPrice="{{ totalPrice }}" 
+          selectCount="{{ selectCount }}"
+          bind:selectAllBack="selectAllBack"
+        />
+      </van-tab>
+      <van-tab title="已支付">
+        <bill-info 
+          billInfoList="{{ billInfoList }}" 
+          ifNotPaid="{{ false }}"
+        />
+      </van-tab>
+    </van-tabs>
+  </van-tab>
+  <van-tab title="水费账单" >
+    <van-tabs color="#178679" swipeable bind:change="changePayStatus" active="{{ payStatusActive }}">
+      <van-tab title="未支付">
+        <bill-info 
+          billInfoList="{{ billInfoList }}" 
+          selectedBill="{{ selectedBill }}"
+          ifNotPaid="{{ true }}"
+          bind:selectBack="selectBack" 
+        />
+        <total-pay 
+          checked="{{ selectAll }}" 
+          totalPrice="{{ totalPrice }}" 
+          selectCount="{{ selectCount }}"
+          bind:selectAllBack="selectAllBack"
+        />
+      </van-tab>
+      <van-tab title="已支付">
+        <bill-info 
+          billInfoList="{{ billInfoList }}" 
+          ifNotPaid="{{ false }}"
+        />
+      </van-tab>
+    </van-tabs>
+  </van-tab>
+  <van-tab title="电费账单" >
+    <van-tabs color="#178679" swipeable bind:change="changePayStatus" active="{{ payStatusActive }}">
+      <van-tab title="未支付">
+        <bill-info 
+          billInfoList="{{ billInfoList }}" 
+          selectedBill="{{ selectedBill }}"
+          ifNotPaid="{{ true }}"
+          bind:selectBack="selectBack" 
+        />
+        <total-pay 
+          checked="{{ selectAll }}" 
+          totalPrice="{{ totalPrice }}" 
+          selectCount="{{ selectCount }}"
+          bind:selectAllBack="selectAllBack"
+        />
+      </van-tab>
+      <van-tab title="已支付">
+        <bill-info 
+          billInfoList="{{ billInfoList }}" 
+          ifNotPaid="{{ false }}"
+        />
+      </van-tab>
+    </van-tabs>
+  </van-tab>
+</van-tabs>
+<van-toast id="van-toast" />
